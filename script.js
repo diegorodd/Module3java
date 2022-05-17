@@ -1,7 +1,7 @@
 // Assignment code here
 var lowercaseChar = ['a','b','c','d','e','f','g','h','i','f','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var uppercaseChar = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-var numberChar = ['0','1','2','3','4','5','6','7','8','9']
+var numbericalChar = ['0','1','2','3','4','5','6','7','8','9']
 var specialChar = ['@', '$', '*', '!', '%', '&', '#', '?', '>', '.', '=', '+', '(', '-', ')', '<', '/', '\\', ';', '[', ']', ':', '{', '}', '|', '"', "'", '_'];
 // look up math.random
 
@@ -23,7 +23,35 @@ if(passwordlength > 128) {
 // confirm boolean for lowercase "yes or no"
 var lowercaseChar = confirm('you need lowercase characaters');
 
-if()
+if(lowercasechar){
+    passwordChar += lowercaseChar;
+}
+// confirm boolean for uppercase "yes or no"
+var uppercaseChar = confirm('you need uppercase characaters');
+
+if(uppercaseChar){
+    passwordChar += uppercaseChar
+}
+var numbericalChar =confirm('would need numbersin th code');
+
+if(numbericalChar){
+    passwordChar += numbericalChar;
+}  
+//  cornfirm for special numbers "yes or no"
+var specialChar = confirm('you would as well need special characters');
+
+if(specialChar){
+    passwordChar += specialChar;
+}
+
+for(var i = 0; i < passwordlength; i++) {
+    password = passwordChar[Math.floor(Math.random()* passwordChar.length)]
+}
+
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("password");
+}
 
 
 
@@ -52,5 +80,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-startPwd();
