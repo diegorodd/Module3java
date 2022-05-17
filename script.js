@@ -47,25 +47,13 @@ if(specialChar){
 
 for(var i = 0; i < passwordlength; i++) {
     password = passwordChar[Math.floor(Math.random()* passwordChar.length)]
+}
+return password 
 } 
-
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("password");
 }
-
-
-
-
-  
-    // need a way to check if they choose none of these choices , if they choose nothing alert them they must choose at least one character type
-  
-
-
-
- 
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -81,10 +69,10 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-}
-function  generatePassword(){
-    return "passcodeword";
-} 
+
+// function  generatePassword(){
+//     return writeasscodeword;
+// } 
 
 
 
