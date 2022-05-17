@@ -4,28 +4,31 @@ var uppercaseChar = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'
 var numberChar = ['0','1','2','3','4','5','6','7','8','9']
 var specialChar = ['@', '$', '*', '!', '%', '&', '#', '?', '>', '.', '=', '+', '(', '-', ')', '<', '/', '\\', ';', '[', ']', ':', '{', '}', '|', '"', "'", '_'];
 // look up math.random
-function generatePassword(){
-    var password = "";
-    var userPassword = "";
-}
 
-function startPwd(){
-  var pwdLength = parseInt(prompt('How long would you like your password to be? must be between 8-128'));
-  if(Number.isNaN(pwdLength)){
-    alert('must be a number');
-    return null;
-  }
-  // || means or in javascript && means "and"
-  if(pwdLength < 8 || pwdLength > 128){
-    alert ('must be between 8 and 128')
-    return null;
-  }
-  var includeLowercaseChar = confirm('would you want to include lowercase letters?')
-  var includeUppercaseChar = confirm('would you want to include uppercase letters?')
-  var includeNumberChar = confirm('would you want to include numbers?')
-  var includeSpecialChar = confirm('would you want to inlcude special characters?');
+function generatePassword() {
+var password = "";
+var passwordChar = "";
+// 
+var passwordlength = prompt('how many characters would you like your password to have? Password must be between 8-128 characters.');
+passwordlength = parseInt(passwordlength);
+
+if(passwordlength < 8){
+    alert('Password must have more than 7 characters.');
+    return "";
 }
-var howLong = document.querySelector(".long")
+if(passwordlength > 128) {
+    alert('Password must not have more than 128 characters.');
+    return "";
+}
+// confirm boolean for lowercase "yes or no"
+var lowercaseChar = confirm('you need lowercase characaters');
+
+if()
+
+
+
+
+  
     // need a way to check if they choose none of these choices , if they choose nothing alert them they must choose at least one character type
   
 
@@ -34,9 +37,7 @@ var howLong = document.querySelector(".long")
  
 
 
- var generatePassword = function(){
-     howLong
- }
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -47,7 +48,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+}   
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
