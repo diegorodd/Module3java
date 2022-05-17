@@ -23,7 +23,8 @@ if(passwordlength > 128) {
 // confirm boolean for lowercase "yes or no"
 var lowercaseChar = confirm('you need lowercase characaters');
 
-if(lowercasechar){
+
+if("lowercasechar"){
     passwordChar += lowercaseChar;
 }
 // confirm boolean for uppercase "yes or no"
@@ -32,9 +33,9 @@ var uppercaseChar = confirm('you need uppercase characaters');
 if(uppercaseChar){
     passwordChar += uppercaseChar
 }
-var numbericalChar =confirm('would need numbersin th code');
+var numericalChar =confirm('would need numbers in the code');
 
-if(numbericalChar){
+if(numericalChar){
     passwordChar += numbericalChar;
 }  
 //  cornfirm for special numbers "yes or no"
@@ -46,7 +47,7 @@ if(specialChar){
 
 for(var i = 0; i < passwordlength; i++) {
     password = passwordChar[Math.floor(Math.random()* passwordChar.length)]
-}
+} 
 
 function writePassword() {
     var password = generatePassword();
@@ -81,5 +82,10 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 }
-generatePassword(); 
+function  generatePassword(){
+    return "passcodeword";
+} 
+
+
+
 
