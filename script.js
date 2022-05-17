@@ -19,7 +19,6 @@ function startPwd(){
   var includeUppercaseChar = confirm('would you want to include uppercase letters?')
   var includeNumberChar = confirm('would you want to include numbers?')
   var includeSpecialChar = confirm('would you want to inlcude special characters?');
-  if()
 }
     // need a way to check if they choose none of these choices , if they choose nothing alert them they must choose at least one character type
   
@@ -29,7 +28,9 @@ function startPwd(){
  
 
 
+ var generatePassword = function(){
 
+ }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -45,4 +46,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-startPwd
+startPwd();
