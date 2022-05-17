@@ -21,32 +21,32 @@ if(passwordlength > 128) {
     return "";
 }
 // confirm boolean for lowercase "yes or no"
-var lowercaseChar = confirm('you need lowercase characaters');
+var lowercasePrompt = confirm('you need lowercase characaters');
 
 
-if("lowercasechar"){
-    passwordChar += lowercaseChar;
+if(lowercasePrompt){
+    passwordChar += lowercaseChar.join('');
 }
 // confirm boolean for uppercase "yes or no"
-var uppercaseChar = confirm('you need uppercase characaters');
+var uppercasePrompt = confirm('you need uppercase characaters');
 
-if(uppercaseChar){
-    passwordChar += uppercaseChar
+if(uppercasePrompt){
+    passwordChar += uppercaseChar.join('');
 }
-var numericalChar =confirm('would need numbers in the code');
+var numericalPrompt = confirm('would need numbers in the code');
 
-if(numericalChar){
-    passwordChar += numbericalChar;
+if(numericalPrompt){
+    passwordChar += numbericalChar.join('');
 }  
 //  cornfirm for special numbers "yes or no"
-var specialChar = confirm('you would as well need special characters');
+var specialPrompt = confirm('you would as well need special characters');
 
-if(specialChar){
-    passwordChar += specialChar;
+if(specialPrompt){
+    passwordChar += specialChar.join('');
 }
 
 for(var i = 0; i < passwordlength; i++) {
-    password = passwordChar[Math.floor(Math.random()* passwordChar.length)]
+    password += passwordChar[Math.floor(Math.random()* passwordChar.length)]
 }
 return password 
 } 
