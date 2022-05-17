@@ -4,8 +4,13 @@ var uppercaseChar = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O'
 var numberChar = ['0','1','2','3','4','5','6','7','8','9']
 var specialChar = ['@', '$', '*', '!', '%', '&', '#', '?', '>', '.', '=', '+', '(', '-', ')', '<', '/', '\\', ';', '[', ']', ':', '{', '}', '|', '"', "'", '_'];
 // look up math.random
+function generatePassword(){
+    var password = "";
+    var userPassword = "";
+}
+
 function startPwd(){
-  var pwdLength = parseInt(prompt('how long would you like your pwd to be? must be between 8-128'));
+  var pwdLength = parseInt(prompt('How long would you like your password to be? must be between 8-128'));
   if(Number.isNaN(pwdLength)){
     alert('must be a number');
     return null;
@@ -20,6 +25,7 @@ function startPwd(){
   var includeNumberChar = confirm('would you want to include numbers?')
   var includeSpecialChar = confirm('would you want to inlcude special characters?');
 }
+var howLong = document.querySelector(".long")
     // need a way to check if they choose none of these choices , if they choose nothing alert them they must choose at least one character type
   
 
@@ -29,7 +35,7 @@ function startPwd(){
 
 
  var generatePassword = function(){
-
+     howLong
  }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
